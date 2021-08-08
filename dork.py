@@ -5,7 +5,7 @@ print(" ▄▀ █▀▀▄ ▄▀▄ ▄▀▀ █░░     ▄▀▀ ▀ ▀�
 print(" █░ █▐█▀ █▀█ ░▀▄ █▀▄     ░▀▄ █ ░█░ █▀▀ ░▀▄ ")                                                   
 print(" ░▀ ▀░▀▀ ▀░▀ ▀▀░ ▀░▀     ▀▀░ ▀ ░▀░ ▀▀▀ ▀▀░ ")                                                   
 print("                  ")                                                                            
-print("                                   MAKE BY ./Spy")                                          
+print("                                   MAKE BY KAVINDU SRI")                                          
                                                                                                        
                                                                                                        
 while True:                                                                                            
