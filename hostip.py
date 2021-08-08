@@ -1,39 +1,8 @@
-import requests as re
-import bs4
-from bs4 import BeautifulSoup as s
-print("""
-
-██╗░░██╗░█████╗░░██████╗████████╗  ██╗██████╗░
-██║░░██║██╔══██╗██╔════╝╚══██╔══╝  ██║██╔══██╗
-███████║██║░░██║╚█████╗░░░░██║░░░  ██║██████╔╝
-██╔══██║██║░░██║░╚═══██╗░░░██║░░░  ██║██╔═══╝░
-██║░░██║╚█████╔╝██████╔╝░░░██║░░░  ██║██║░░░░░
-╚═╝░░╚═╝░╚════╝░╚═════╝░░░░╚═╝░░░  ╚═╝╚═╝░░░░░
-                                            Created by Kavindu Sri""")
-
-print(" ")
-while True:
-#For enter host
-    try:
-        i = input("Enter Host: ")
-        print(" ")
-    
-    
-        url = "https://check-host.net/ip-info?host="+i
-        hed = {"user-agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36"}
-#for send get requests to the web site and get source of web site
-        res = re.get(url, headers=hed).text
-#pass web source to beauti full soup
-        html_parser = s(res,"html.parser")
-#get ekement tags
-        find_tag = html_parser.find_all("td")
-#print Its
-#print(rc[0])
-        tag_var = find_tag[0]
-        l = tag_var.td.strong.text
-        print("             IP ADDRESS IS " , l)
-        print()
-
-    except:
-        print("              Unknow Host")
-        print()
+import base64, codecs
+magic = 'aW1wb3J0IHJlcXVlc3RzIGFzIHJlCmltcG9ydCBiczQKZnJvbSBiczQgaW1wb3J0IEJlYXV0aWZ1bFNvdXAgYXMgcwpwcmludCgiIiIKCuKWiOKWiOKVl+KWkeKWkeKWiOKWiOKVl+KWkeKWiOKWiOKWiOKWiOKWiOKVl+KWkeKWkeKWiOKWiOKWiOKWiOKWiOKWiOKVl+KWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKVl+KAg+KAg+KWiOKWiOKVl+KWiOKWiOKWiOKWiOKWiOKWiOKVl+KWkQrilojilojilZHilpHilpHilojilojilZHilojilojilZTilZDilZDilojilojilZfilojilojilZTilZDilZDilZDilZDilZ3ilZrilZDilZDilojilojilZTilZDilZDilZ3igIPigIPilojilojilZHilojilojilZTilZDilZDilojilojilZcK4paI4paI4paI4paI4paI4paI4paI4pWR4paI4paI4pWR4paR4paR4paI4paI4pWR4pWa4paI4paI4paI4paI4paI4pWX4paR4paR4paR4paR4paI4pa'
+love = 'V4cJE4cnE4cnE4cnE4bPQ4bPQ4cnV4cnV4cJE4cnV4cnV4cnV4cnV4cnV4cnV4cJH4cJqPhXJvBXJvBXIyBXIxBXIxBXJvBXJvBXIxrXJvBXJvBXIxrXJxrXJxrXJvBXJvBXIxrXJxrXIzhXIxBXIxBXIxBXJvBXJvBXIy+XJxrXJxrXJxrXJvBXJvBXIxrXJxrXJxrXJxrXNt+XNt+XJvBXJvBXIxrXJvBXJvBXIyBXIxBXIxBXIxBXIarXJxDevybwvybwvyMUvycUvycUvybwvybwvyMUvyMevybwvybwvybwvybwvybwvyMGvyM3vybwvybwvybwvybwvybwvybwvyMGvyM3vycUvycUvycUvybwvybwvyMUvycUvycUvycUvtVCvtVCvybwvybwvyMUvybwvybwvyMUvycUvycUvycUvycUvycRX4cJn4cJD4cJq4cnE4cnE4cJn4cJD4cJq4cnE4cJn4cJD4cJD4cJD4cJD4cJq4cnE4cJn4cJD4cJD4cJD4cJD4cJD4cJq4cnE4cnE4cnE4cnE4cJn4cJD4cJq4cnE4cnE4cnE4bPQ4bPQ4cJn4cJD4c'
+god = 'Wd4pWa4pWQ4pWd4paR4paR4paR4paR4paRCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQ3JlYXRlZCBieSAuL1NweSIiIikKCnByaW50KCIgIikKd2hpbGUgVHJ1ZToKI0ZvciBlbnRlciBob3N0CiAgICB0cnk6CiAgICAgICAgaSA9IGlucHV0KCJFbnRlciBIb3N0OiAiKQogICAgICAgIHByaW50KCIgIikKICAgIAogICAgCiAgICAgICAgdXJsID0gImh0dHBzOi8vY2hlY2staG9zdC5uZXQvaXAtaW5mbz9ob3N0PSIraQogICAgICAgIGhlZCA9IHsidXNlci1hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDYuMTsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzg5LjAuNDM4OS45MCBTYWZhcmkvNTM3LjM2In0KI2ZvciBzZW5kIGdldCByZXF1ZXN0cyB0byB0aGUgd2ViIHNpdGUgY'
+destiny = 'J5xVTqyqPOmo3IlL2Hto2Ltq2IvVUAcqTHXVPNtVPNtVPOlMKZtCFOlMF5aMKDbqKWfYPObMJSxMKWmCJuyMPxhqTI4qNbwpTSmplO3MJVtp291pzAyVUEiVTWyLKI0nFOzqJkfVUAiqKNXVPNtVPNtVPObqT1fK3OupaAypvN9VUZbpzImYPWbqT1fYaOupaAypvVcPvAaMKDtMJgyoJIhqPO0LJqmPvNtVPNtVPNtMzyhMS90LJptCFObqT1fK3OupaAypv5znJ5xK2SfoPtvqTDvXDbwpUWcoaDtFKEmPvAjpzyhqPulL1fjKFxXVPNtVPNtVPO0LJqsqzSlVQ0tMzyhMS90LJqoZS0XVPNtVPNtVPOfVQ0tqTSaK3Mupv50MP5mqUWiozphqTI4qNbtVPNtVPNtVUOlnJ50XPVtVPNtVPNtVPNtVPNtFINtDHERHxIGHlOWHlNvVPjtoPxXVPNtVPNtVPOjpzyhqPtcPtbtVPNtMKuwMKO0BtbtVPNtVPNtVUOlnJ50XPVtVPNtVPNtVPNtVPNtVSIhn25iqlOVo3A0VvxXVPNtVPNtVPOjpzyhqPtcPt=='
+joy = '\x72\x6f\x74\x31\x33'
+trust = eval('\x6d\x61\x67\x69\x63') + eval('\x63\x6f\x64\x65\x63\x73\x2e\x64\x65\x63\x6f\x64\x65\x28\x6c\x6f\x76\x65\x2c\x20\x6a\x6f\x79\x29') + eval('\x67\x6f\x64') + eval('\x63\x6f\x64\x65\x63\x73\x2e\x64\x65\x63\x6f\x64\x65\x28\x64\x65\x73\x74\x69\x6e\x79\x2c\x20\x6a\x6f\x79\x29')
+eval(compile(base64.b64decode(eval('\x74\x72\x75\x73\x74')),'<string>','exec'))
